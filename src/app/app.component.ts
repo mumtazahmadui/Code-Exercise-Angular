@@ -10,8 +10,8 @@ import { LoginComponent } from './login/login.component';
 export class AppComponent implements OnInit {
   title = 'AngularDemo';
   loggedIn = false;
-  @ViewChild('login') login: LoginComponent;
-  @ViewChild('navbar') public myNav;
+  @ViewChild('login',{static:false}) login: LoginComponent;
+  @ViewChild('navbar',{static:false}) public myNav;
 
   constructor(private router: Router) {
 
